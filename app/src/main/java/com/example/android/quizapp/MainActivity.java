@@ -2,9 +2,8 @@ package com.example.android.quizapp;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -21,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     // storing possible number of points
     static int possibleNumberOfPoints = 9;
     //store current score of user.
-    int pointScoredSoFar = 0;
+    int pointsScoredSoFar = 0;
     //store total score as a percent of possible number of points
     float userScore;
     //check if user has answered all questions
@@ -30,13 +29,14 @@ public class MainActivity extends AppCompatActivity {
     String userName, userEmail;
 
     /**
-     *  @param the submit button view
+     *  @param view the submit button view.
      *  defines what happens when user hits the submit button.
      */
     public void submitAnswers(View view){
 
-        EditText userNameRaw = (EditText) findViewById(R.id.entered_name);
-        EditText userEmailRaw = (EditText) findViewById(R.id.entered_email);
+        //create editText view objects to extract text and assign to string variables userName and userEmail.
+        EditText userNameRaw = findViewById(R.id.entered_name);
+        EditText userEmailRaw = findViewById(R.id.entered_email);
         String usersName = userNameRaw.getText().toString();
         String usersEmail = userEmailRaw.getText().toString();
         userName = usersName;
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
             markUserResponses(checkBoxOne, checkBoxTwo, checkBoxThree, checkBoxFour, checkBoxFive,
                     firstQuizTwo, firstQuizThree, secondQuizFour, responseString);
 
-            userScore = ((float) pointScoredSoFar / possibleNumberOfPoints) * 100;
+            userScore = ((float) pointsScoredSoFar / possibleNumberOfPoints) * 100;
         } else{
             return;
         }
@@ -79,15 +79,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * @params all checkboxes, all the radiogroups and the last Edit text response
+     * @params checkOne, checkTwo, checkThree, checkFour, checkFive, groupOne, groupTwo, groupThree,
+     * stringAnswer all checkboxes, all the radiogroups and the last Edit text response
      * @returns true if user has responded to all quiz questions and false otherwise.
      */
     public boolean checkUserAttemptsAllQuestions(CheckBox checkOne, CheckBox checkTwo, CheckBox
             checkThree, CheckBox checkFour, CheckBox checkFive, RadioGroup groupOne, RadioGroup
             groupTwo, RadioGroup groupThree, String stringAnswer){
 
-        /**Using a variable checked initialized to zero to run through check boxes and incerement
-         *  whenever a checkbox is checked.
+        /**Using a variable checked initialized to zero to run through check boxes and
+         * incerement it by one whenever a checkbox is checked.
          */
         //a variable to keep track of how many check boxes are checked.
         int checked = 0;
@@ -109,36 +110,37 @@ public class MainActivity extends AppCompatActivity {
             checked += 1;
         }
         //After running through all checkboxes and checked is still zero then we know no response on quiz one.
+
         if (checked == 0){
-            Toast.makeText(this, "Please respond to Quiz question one",
+            Toast.makeText(this, getString(R.string.checkIfQuestionOneHasAResponse),
                     Toast.LENGTH_SHORT).show();
             return false;
         }
 
         //Now we check if the radioGroup for Quiz two has a response.
         if (groupOne.getCheckedRadioButtonId() == -1){
-            Toast.makeText(this, "Please respond to Quiz question two",
+            Toast.makeText(this, getString(R.string.checkIfQuestionTwoHasAResponse),
                     Toast.LENGTH_SHORT).show();
             return false;
         }
 
         //Now we check if the radioGroup for Quiz three has a response.
         if (groupTwo.getCheckedRadioButtonId() == -1){
-            Toast.makeText(this, "Please respond to Quiz question three",
+            Toast.makeText(this, getString(R.string.checkIfQuestionThreeHasAResponse),
                     Toast.LENGTH_SHORT).show();
             return false;
         }
 
         //Now we check if the radioGroup for Quiz four has a response.
         if (groupThree.getCheckedRadioButtonId() == -1){
-            Toast.makeText(this, "Please respond to Quiz question four",
+            Toast.makeText(this, getString(R.string.checkIfQuestionFourHasAResponse),
                     Toast.LENGTH_SHORT).show();
             return false;
         }
 
         //Now we check if the edit view for Quiz five has a response.
         if (stringAnswer.trim().equals("")){
-            Toast.makeText(this, "Please respond to Quiz question five",
+            Toast.makeText(this, getString(R.string.checkIfQuestionFiveHasAResponse),
                     Toast.LENGTH_SHORT).show();
             return false;
         }
@@ -153,101 +155,94 @@ public class MainActivity extends AppCompatActivity {
             check4, CheckBox check5, RadioButton radio1, RadioButton radio2, RadioButton
             radio3, String aString){
 
-        pointScoredSoFar = 0;
+        pointsScoredSoFar = 0;
 
         // Now we mark the answers!
         if (check1.isChecked()){
-            pointScoredSoFar += 1;
+            pointsScoredSoFar += 1;
         }
         if (check2.isChecked()){
-            pointScoredSoFar += 1;
+            pointsScoredSoFar += 1;
         }
         if (check4.isChecked()){
-            pointScoredSoFar += 1;
+            pointsScoredSoFar += 1;
         }
         //We want to reward user with a point if they leave this unchecked and deny them otherwise.
         if (!check3.isChecked()){
-            pointScoredSoFar += 1;
+            pointsScoredSoFar += 1;
         }
         //We want to reward user with a point if they leave this unchecked and deny them otherwise.
         if (!check5.isChecked()){
-            pointScoredSoFar += 1;
+            pointsScoredSoFar += 1;
         }
         if (radio1.isChecked()){
-            pointScoredSoFar += 1;
+            pointsScoredSoFar += 1;
         }
         if (radio2.isChecked()){
-            pointScoredSoFar += 1;
+            pointsScoredSoFar += 1;
         }
         if (radio3.isChecked()){
-            pointScoredSoFar += 1;
+            pointsScoredSoFar += 1;
         }
         if (aString.trim().equals("Calculus")){
-            pointScoredSoFar += 1;
+            pointsScoredSoFar += 1;
         }
-        Toast.makeText(this, "Your Score: " + pointScoredSoFar +
-                        "\nMaximum score possible: " + possibleNumberOfPoints,
-                Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getString(R.string.mark_user_response, pointsScoredSoFar,
+                possibleNumberOfPoints), Toast.LENGTH_SHORT).show();
         return;
     }
+
     /**
-     * @params on click of the how i did button.
+     * @params view (the your score button)on click of the how i did button.
      *
      */
     public void computeScore(View view){
         // to ensure user submits results
         if (!userAnswersAll){
-            Toast.makeText(this, "Sorry!\nTry submitting your" +
-                    " score before viewing your result.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.remind_user_to_answer_all), Toast.LENGTH_SHORT).show();
             return;
         }
         // to ensure email and name tabs not empty.
         if (userName.trim().equals("") || userEmail.trim().equals("")){
-            Toast.makeText(this, "Sorry enter name and email then resubmit!",
+            Toast.makeText(this, getString(R.string.remind_user_to_enter_details),
                     Toast.LENGTH_SHORT).show();
             return;
         }
         // if all checks show a score preview.
-        Toast.makeText(this, "Hi " + userName +
-                "!\nYou scored: " + String.format("%.2f", userScore) + "%\nThanks for using me."
-                + "\nTap the Email button for me to send you results at " + userEmail,
-                Toast.LENGTH_SHORT).show();
+        String formattedString = String.format("%.2f", userScore);
+        Toast.makeText(this, getString(R.string.its_okay_to_mark, userName,
+                formattedString, userEmail), Toast.LENGTH_SHORT).show();
         return;
     }
 
     /**
-     * @params on click of the email button.
+     * @params view on click of the email button.
      *
      */
     public void emailResults(View view){
         // just to be sure the user has submitted results
         if (!userAnswersAll){
-            Toast.makeText(this, "Sorry!\nTry submitting your" +
-                    " score before i mail to you your result.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.email_button1), Toast.LENGTH_SHORT).show();
             return;
         }
         //to ensure email and name fields are not empty too
         if (userName.trim().equals("") || userEmail.trim().equals("")){
-            Toast.makeText(this, "Sorry enter name and email then resubmit!",
+            Toast.makeText(this, getString(R.string.email_button2),
                     Toast.LENGTH_SHORT).show();
             return;
         }
         //if all checks ready the email message and send.
-        String myText = "";
-        myText += "Hi " + userName;
-        myText += "!\nYou scored: " + String.format("%.2f", userScore) + "%\nThanks for using me.";
-
         Intent myEmailDesire = new Intent(Intent.ACTION_SENDTO);
         myEmailDesire.setData(Uri.parse("mailto:"));
 
         //Customize the subject field.
-        myEmailDesire.putExtra(myEmailDesire.EXTRA_SUBJECT, "Quiz results for: " + userName);
+        myEmailDesire.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.email_button4, userName));
 
         //Automatically populate email body with customise text.(myText)
-        myEmailDesire.putExtra(myEmailDesire.EXTRA_TEXT, myText);
-        
+        myEmailDesire.putExtra(Intent.EXTRA_TEXT, getString(R.string.email_button3, userName, String.format("%.2f", userScore)));
+
         //Automatically populate the to box for which addresses the email is sent to.
-        myEmailDesire.putExtra(myEmailDesire.EXTRA_EMAIL, new String[] {"aggreyah@hotmail.com", userEmail});
+        myEmailDesire.putExtra(Intent.EXTRA_EMAIL, new String[]{"aggreyah@hotmail.com", userEmail});
 
         if (myEmailDesire.resolveActivity(getPackageManager()) != null){
             startActivity(myEmailDesire);

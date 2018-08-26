@@ -1,3 +1,56 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Quiz App</string>
+    <string name="headline_text_view">Galactic Knowledge Center</string>
+    <string name="milkyway_text_view">The milky way galaxy</string>
+    <string name="solar_sytem_text_view">Solar system Center</string>
+    <string name="earth_text_view">Earth branch</string>
+    <string name="physics_text_view">Physics quiz</string>
+    <string name="instruction_text_view">Please read each quiz question carefully before responding as appropriate. Good Luck!</string>
+    <string name="question1_text_view">Quiz question one:</string>
+    <string name="question1_q_text_view">Albert Einstein had a hand in which of the following theories? (Choose as many as are correct.)</string>
+    <string name="checkbox1_text_checkbox_view">Special theory of relativity.</string>
+    <string name="checkbox2_text_checkbox_view">The photo-electric effect.</string>
+    <string name="checkbox3_text_checkbox_view">Existence of a stationary aether.</string>
+    <string name="checkbox4_text_checkbox_view">General theory of relativity.</string>
+    <string name="checkbox5_text_checkbox_view">Quantum mechanics.</string>
+    <string name="question2_text_view">Quiz question two:</string>
+    <string name="question2_q_text_view">The Davisson-Germer experiment demonstrated one of the following. (Choose which one.)</string>
+    <string name="button1_quiz2_radio_group">The wave nature of the electron.</string>
+    <string name="button2_quiz2_radio_group">The existence of a stationary aether.</string>
+    <string name="button3_quiz2_radio_group">The special theory of relativity.</string>
+    <string name="question3_text_view">Quiz question three:</string>
+    <string name="question3_q_text_view">The Michelson-Morley experiment demonstrated one of the following. (Choose which one.)</string>
+    <string name="button1_quiz3_radio_group">The absence of a stationary aether.</string>
+    <string name="button2_quiz3_radio_group">The general theory of relativity.</string>
+    <string name="button3_quiz3_radio_group">The wave nature of an electron.</string>
+    <string name="question4_text_view">Quiz question four:</string>
+    <string name="question4_q_text_view">Louis de Broglie theorized one of the following phenomena. (Choose which one.)</string>
+    <string name="button1_quiz4_radio_group">The speed of light is constant irrespective of the relative motion of source and observer.</string>
+    <string name="button2_quiz4_radio_group">All matter has wave properties.</string>
+    <string name="button3_quiz4_radio_group">There exists a luminiferous aether.</string>
+    <string name="question5_text_view">Quiz question five:</string>
+    <string name="question5_q_text_view">Isaac Newton is famous for what branch of mathematics? (Type your answer in the space provided below.)</string>
+    <string name="question5_edit_text_view">Type in the branch of mathematics Newton is known for.</string>
+    <string name="submit_button_text">Submit</string>
+    <string name="how_i_did_button_text">Your Score</string>
+    <string name="email_results_button_text">Email Results</string>
+
+    <!-- Java strings -->
+    <string name="checkIfQuestionOneHasAResponse">Please respond to Quiz question one.</string>
+    <string name="checkIfQuestionTwoHasAResponse">Please respond to Quiz question two.</string>
+    <string name="checkIfQuestionThreeHasAResponse">Please respond to Quiz question three.</string>
+    <string name="checkIfQuestionFourHasAResponse">Please respond to Quiz question four.</string>
+    <string name="checkIfQuestionFiveHasAResponse">Please respond to Quiz question five.</string>
+    <string name="mark_user_response">Your score: <xliff:g id="pointsScoredSoFar">%1$d</xliff:g>
+        \nMaximum score possible: <xliff:g id="possibleNumberOfPoints">%2$d</xliff:g></string>
+    <string name="remind_user_to_answer_all">Sorry!\nTry submitting your score before viewing your result.</string>
+    <string name="remind_user_to_enter_details">Sorry enter name and email then resubmit!</string>
+    <string name="its_okay_to_mark">Hi <xliff:g id="userName">%1$s</xliff:g>!\nYou scored:
+        <xliff:g id="formattedString">%2$s</xliff:g>%%\nThanks for using me.\nTap
+        the Email button for me to send you results at <xliff:g id="userEmail">%3$s</xliff:g></string>
+    <string name="email_button1">Sorry!\nTry submitting your score before we mail to you your result.</string>
+    <string name="email_button2">Sorry enter name and email then resubmit!</string>
+    <string name="email_button3">Hi <xliff:g id="userName">%1$s</xliff:g>!\nYou
+        scored: <xliff:g id="userScore">%2$s</xliff:g>%%\nThanks for visiting the galactic knowledge center."</string>
+    <string name="email_button4">Quiz results for <xliff:g id="userName">%1$s</xliff:g></string>
 </resources>

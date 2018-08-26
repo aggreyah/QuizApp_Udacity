@@ -1,273 +1,242 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    android:layout_height="match_parent"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_height="match_parent">
+
     <LinearLayout
-        android:layout_height="match_parent"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Galactic Knowledge Center"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="8dp"
-            android:textSize="30sp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="The Milky Way Galaxy"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="8dp"
-            android:textSize="25sp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Solar System"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="15dp"
-            android:textSize="25sp"/>
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/solar_system"
             android:layout_gravity="center"
-            android:scaleType="fitXY"
-            android:layout_marginBottom="15dp"/>
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/solar_system" />
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Earth Branch"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="8dp"
-            android:textSize="25sp"/>
+            style="@style/IntroTextStyles"
+            android:text="@string/headline_text_view" />
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Physics Quiz"
-            android:layout_gravity="center_horizontal"
-            android:textSize="25sp"/>
+            style="@style/IntroTextStyles"
+            android:text="@string/milkyway_text_view" />
+
+        <TextView
+            style="@style/IntroTextStyles"
+            android:text="@string/solar_sytem_text_view" />
+
+
+        <TextView
+            style="@style/IntroTextStyles"
+            android:text="@string/earth_text_view" />
+
+        <TextView
+            style="@style/IntroTextStyles"
+            android:text="@string/physics_text_view" />
+
         <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/entered_name"
+            style="@style/EditTextViewStyles"
             android:hint="Name"
-            android:inputType="textCapWords"
-            android:layout_gravity="center_horizontal" />
+            android:inputType="textCapWords" />
+
         <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/entered_email"
+            style="@style/EditTextViewStyles"
             android:hint="Email Address"
-            android:inputType="textEmailAddress"
-            android:layout_gravity="center_horizontal"/>
+            android:inputType="textEmailAddress" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Please read each quiz question carefully before responding as appropriate. Good Luck!"
             android:layout_marginBottom="8dp"
-            android:gravity="center_horizontal"
-            android:textSize="23sp"/>
+            style="@style/QuestionsTextStyle"
+            android:text="@string/instruction_text_view" />
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/question_one"
-            android:text="Quiz Question One:"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="6dp"
-            android:background="#03DAC5"/>
+            style="@style/QuestionsHeadingsStyle"
+            android:text="@string/question1_text_view" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Albert Einstein had a hand in which of the following theories? (Choose as many as are correct.)"
-            android:gravity="center_horizontal"
-            android:textSize="20sp"/>
+            style="@style/QuestionsTextStyle"
+            android:text="@string/question1_q_text_view" />
+
         <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Special theory of relativity."
-            android:layout_marginLeft="45dp"
-            android:id="@+id/checkbox_one"/>
+            android:id="@+id/checkbox_one"
+            style="@style/CheckBoxesStyle"
+            android:text="@string/checkbox1_text_checkbox_view" />
+
         <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="The photo-electric effect."
-            android:layout_marginLeft="45dp"
-            android:id="@+id/checkbox_two"/>
+            android:id="@+id/checkbox_two"
+            style="@style/CheckBoxesStyle"
+            android:text="@string/checkbox2_text_checkbox_view" />
+
         <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Existence of a stationary aether."
-            android:layout_marginLeft="45dp"
-            android:id="@+id/checkbox_three"/>
+            android:id="@+id/checkbox_three"
+            style="@style/CheckBoxesStyle"
+            android:text="@string/checkbox3_text_checkbox_view" />
+
         <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="General theory of relativity."
-            android:layout_marginLeft="45dp"
-            android:id="@+id/checkbox_four"/>
+            android:id="@+id/checkbox_four"
+            style="@style/CheckBoxesStyle"
+            android:text="@string/checkbox4_text_checkbox_view" />
+
         <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Quantum mechanics."
-            android:layout_marginLeft="45dp"
-            android:id="@+id/checkbox_five"/>
+            android:id="@+id/checkbox_five"
+            style="@style/CheckBoxesStyle"
+            android:text="@string/checkbox5_text_checkbox_view" />
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/question_two"
-            android:text="Quiz Question Two:"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="6dp"
-            android:background="#03DAC5"/>
+            style="@style/QuestionsHeadingsStyle"
+            android:text="@string/question2_text_view" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="The Davisson-Germer experiment demonstrated one of the following. (Choose which one.)"
-            android:gravity="center_horizontal"
-            android:textSize="20sp"/>
+            style="@style/QuestionsTextStyle"
+            android:text="@string/question2_q_text_view" />
+
         <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginLeft="45dp"
-            android:id="@+id/radio_quiz_two">
+            android:id="@+id/radio_quiz_two"
+            style="@style/RadioGroupStyle"
+            android:orientation="vertical">
+
             <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/button_one_quiz2"
-                android:text="The wave nature of the electron."/>
-            <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/button1_quiz2_radio_group" />
+
+            <RadioButton
                 android:id="@+id/button_two_quiz2"
-                android:text="The existence of a stationary aether."/>
-            <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/button2_quiz2_radio_group" />
+
+            <RadioButton
                 android:id="@+id/button_three_quiz2"
-                android:text="The special theory of relativity."/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button3_quiz2_radio_group" />
         </RadioGroup>
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/question_three"
-            android:text="Quiz Question Three:"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="6dp"
-            android:background="#03DAC5"/>
+            style="@style/QuestionsHeadingsStyle"
+            android:text="@string/question3_text_view" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="The Michelson-Morley experiment demonstrated one of the following. (Choose which one.)"
-            android:gravity="center_horizontal"
-            android:textSize="20sp"/>
+            style="@style/QuestionsTextStyle"
+            android:text="@string/question3_q_text_view" />
+
         <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginLeft="45dp"
-            android:id="@+id/radio_quiz_three">
+            android:id="@+id/radio_quiz_three"
+            style="@style/RadioGroupStyle"
+            android:orientation="vertical">
+
             <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/button_one_quiz3"
-                android:text="The absence of a stationary aether."/>
-            <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/button1_quiz3_radio_group" />
+
+            <RadioButton
                 android:id="@+id/button_two_quiz3"
-                android:text="The general theory of relativity."/>
-            <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/button2_quiz3_radio_group" />
+
+            <RadioButton
                 android:id="@+id/button_three_quiz3"
-                android:text="The wave nature of an electron."/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button3_quiz3_radio_group" />
         </RadioGroup>
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/question_four"
-            android:text="Quiz Question Four:"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="6dp"
-            android:background="#03DAC5"/>
+            style="@style/QuestionsHeadingsStyle"
+            android:text="@string/question4_text_view" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="Louis de Broglie theorized one of the following phenomena. (Choose which one.)"
-            android:textSize="20sp"/>
+            style="@style/QuestionsTextStyle"
+            android:text="@string/question4_q_text_view" />
+
         <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginLeft="45dp"
-            android:id="@+id/radio_quiz_four">
+            android:id="@+id/radio_quiz_four"
+            style="@style/RadioGroupStyle"
+            android:orientation="vertical">
+
             <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/button_one_quiz4"
-                android:text="The speed of light is constant irrespective of the relative motion of source and observer."/>
-            <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/button1_quiz4_radio_group" />
+
+            <RadioButton
                 android:id="@+id/button_two_quiz4"
-                android:text="All matter has wave properties."/>
-            <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/button2_quiz4_radio_group" />
+
+            <RadioButton
                 android:id="@+id/button_three_quiz4"
-                android:text="There exists a luminiferous aether."/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button3_quiz4_radio_group" />
         </RadioGroup>
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/question_five"
-            android:text="Quiz Question Five:"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="6dp"
-            android:background="#03DAC5"/>
+            style="@style/QuestionsHeadingsStyle"
+            android:text="@string/question5_text_view" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="Isaac Newton is famous for what branch of mathematics? (Type your answer in the space provided below.)"
-            android:textSize="20sp"/>
+            style="@style/QuestionsTextStyle"
+            android:text="@string/question5_q_text_view" />
+
         <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/entered_answer"
-            android:hint="Type in the branch of mathematics Newton is known for."
-            android:inputType="textCapWords"
-            android:layout_marginLeft="45dp"
-            android:gravity="center_horizontal"/>
+            style="@style/EditTextViewStyles"
+            android:hint="@string/question5_edit_text_view"
+            android:inputType="textCapWords" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
             android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
             android:gravity="center_horizontal">
+
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:id="@+id/submit_button"
-                android:text="Submit"
-                android:layout_marginRight="15dp"
-                android:onClick="submitAnswers"/>
+                style="@style/ButtonsStyle"
+                android:onClick="submitAnswers"
+                android:text="@string/submit_button_text" />
+
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="How I did"
-                android:layout_marginRight="15dp"
-                android:onClick="computeScore"/>
+                style="@style/ButtonsStyle"
+                android:onClick="computeScore"
+                android:text="@string/how_i_did_button_text" />
+
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Email Results"
-                android:onClick="emailResults"/>
+                style="@style/ButtonsStyle"
+                android:onClick="emailResults"
+                android:text="@string/email_results_button_text" />
         </LinearLayout>
 
     </LinearLayout>
