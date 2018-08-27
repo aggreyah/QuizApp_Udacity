@@ -50,8 +50,6 @@
             android:inputType="textEmailAddress" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             style="@style/QuestionsTextStyle"
             android:text="@string/instruction_text_view" />
@@ -62,8 +60,6 @@
             android:text="@string/question1_text_view" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             style="@style/QuestionsTextStyle"
             android:text="@string/question1_q_text_view" />
 
@@ -98,8 +94,6 @@
             android:text="@string/question2_text_view" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             style="@style/QuestionsTextStyle"
             android:text="@string/question2_q_text_view" />
 
@@ -133,8 +127,6 @@
             android:text="@string/question3_text_view" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             style="@style/QuestionsTextStyle"
             android:text="@string/question3_q_text_view" />
 
@@ -168,8 +160,6 @@
             android:text="@string/question4_text_view" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             style="@style/QuestionsTextStyle"
             android:text="@string/question4_q_text_view" />
 

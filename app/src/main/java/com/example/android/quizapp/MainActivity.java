@@ -152,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
         if (radio3.isChecked()){
             pointsScoredSoFar += 1;
         }
-        if (aString.trim().equals("Calculus")){
+        if (aString.trim().equalsIgnoreCase("Calculus")){
             pointsScoredSoFar += 1;
         }
         Toast.makeText(this, getString(R.string.mark_user_response, pointsScoredSoFar,
@@ -161,12 +161,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void computeScore(View view){
-        // to ensure user submits results
         if (!userAnswersAll){
             Toast.makeText(this, getString(R.string.remind_user_to_answer_all), Toast.LENGTH_SHORT).show();
             return;
         }
-        // to ensure email and name tabs not empty.
         if (userName.trim().equals("") || userEmail.trim().equals("")){
             Toast.makeText(this, getString(R.string.remind_user_to_enter_details),
                     Toast.LENGTH_SHORT).show();
