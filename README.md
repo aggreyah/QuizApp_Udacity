@@ -1,6 +1,6 @@
-# **QuizApp_Udacity** project by ***Aggrey Ochieng***\
+# **QuizApp_Udacity** project by ***Aggrey Ochieng***
 
-## *This project has been tested on the following Android studio system.*\
+## *This project has been tested on the following Android studio system.*
 
 **Android Studio 3.1.4**\
 **Build #AI-173.4907809, built on July 24, 2018**\
