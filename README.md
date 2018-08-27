@@ -8,4 +8,4 @@
 **JVM: OpenJDK 64-Bit Server VM by JetBrains s.r.o**\
 **Linux 4.13.0-45-generic**
 
-### [My quiz app link](https://drive.google.com/open?id=16k0G5OnkgvI_lBSSY8E3VB8Ph4EFZ8Tm)
+### [My quiz app .apk link](https://drive.google.com/open?id=16k0G5OnkgvI_lBSSY8E3VB8Ph4EFZ8Tm)
